@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Facebook Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 800px; 
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background-color: #3b5998; 
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #f7f7f7;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .navbar a {
+            color: #3b5998;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .sidebar {
+            width: 125px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .main {
+            width: calc(100% - 145px);
+            float: left;
+        }
+
+        .footer {
+            clear: both;
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .profile-info {
+            background-color: #f0f2f5;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #3b5998; 
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+        }
+
+        .button:hover {
+            background-color: #2e4776; 
+        }
+
+        .search-container {
+            margin-bottom: 20px; 
+        }
+
+        .search-container input[type="text"] {
+            width: 100%; 
+            padding: 5px; 
+            border: 1px solid #ccc; 
+        }
+
+        .search-container input[type="submit"] {
+            background-color: #3b5998; 
+            color: white;
+            padding: 6px; 
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+            margin-top: 5px; 
+        }
+
+        .search-container input[type="submit"]:hover {
+            background-color: #2e4776; 
+        }
+
+        .preferences-table {
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 15px;
+        }
+
+        .preferences-table th, .preferences-table td {
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            text-align: left; 
+        }
+
+        .preferences-table th {
+            background-color: #f7f7f7; 
+        }
+
+        .section {
+            margin-bottom: 20px; 
+        }
+
+        .section-links {
+            margin-top: 15px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>thefacebook</h1>
+        </div>
+
+        <div class="navbar">
+            <a href="index.php">Home</a>
+            <a href="search.php">Search</a>
+            <a href="global.php">Global</a>
+            <a href="social_net.php">Social Net</a>
+            <a href="invite.php">Invite</a>
+            <a href="faq.php">FAQ</a>
+            <a href="logout.php">Log Out</a>
+        </div>
+
+        <div class="clearfix">
+            <div class="sidebar">
+                <div class="search-container">
+                    <h4>Quick Search</h4>
+                    <input type="text" placeholder="Search...">
+                    <input type="submit" value="Search">
+                </div>
+
+                <div class="section-links">
+                    <a href="edit_profile.php">Edit My Profile</a><br>
+                    <a href="my_groups.php">My Groups</a><br>
+                    <a href="my_friends.php">My Friends</a><br>
+                    <a href="my_messages.php">My Messages</a><br>
+                    <a href="my_away_message.php">My Away Message</a><br>
+                    <a href="my_mobile_info.php">My Mobile Info</a><br>
+                    <a href="my_account.php">My Account</a><br>
+                    <a href="my_privacy.php">My Privacy Preferences</a><br>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="section">
+                    <div class="profile-info">
+                        <h3>Profile Picture:</h3>
+                        <img src='images/default-profile-pic.jpg' class='profile-pic' alt='Profile Picture'>
+                        <br>
+                        <button class="button">Edit Picture</button>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="profile-info">
+                        <h3>Account Info:</h3>
+                        <p><strong>Name:</strong></p>
+                        <p><strong>Member Since:</strong></p>
+                        <p><strong>Last Update:</strong></p>
+                    </div>
+
+                    <div class="profile-info">
+                        <h3>Basic Info:</h3>
+                        <p><strong>School:</strong></p>
+                        <p><strong>Status:</strong></p>
+                        <p><strong>Sex:</strong></p>
+                        <p><strong>Birthday:</strong></p>
+                        <p><strong>Home Town:</strong></p>
+                        <p><strong>High School:</strong></p>
+                    </div>
+
+                    <div class="profile-info">
+                        <h3>Contact Info:</h3>
+                        <p><strong>Email:</strong></p>
+                        <p><strong>Screenname:</strong></p>
+                        <p><strong>Mobile:</strong></p>
+                    </div>
+
+                    <div class="profile-info">
+                        <h3>Personal Info:</h3>
+                        <p><strong>Looking For:</strong></p>
+                        <p><strong>Interested In:</strong></p>
+                        <p><strong>Relationship Status:</strong></p>
+                        <p><strong>Political Views:</strong></p>
+                        <p><strong>Interests:</strong></p>
+                        <p><strong>Music:</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2004 Facebook</p>
+        </div>
+    </div>
+
+</body>
+</html>
